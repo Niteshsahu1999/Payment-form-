@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment_form_css</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 17px;
+            margin: 15px 30px;
+            padding: 15px 30px;
+        }
+        .x{
+            background-color: #f2f2f2;
+            padding: 10px 40px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
+    
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea{
+            width: 100%;
+            padding: 8px 5px;
+            margin: 10px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
+        fieldset{
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            padding: 5px 5px;
+            background-color: white;
+        }
+        h1{
+            text-align:center;
+        }
+        input[type="submit"]{
+            font-size: 17px;
+            padding: 10px;
+            width: 100%;
+            cursor:pointer;
+            background-color: lightgreen;
+        }
+        input[type="submit"]:hover{
+            background-color: green;
+        }
+        p{
+            font-size:small;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="x">
+    <form action="">
+        <h1>Payment Form</h1>
+        <hr>
+        <p>Required fields are followed by *</p>
+        <h2>User Information</h2>
+        Name:*<input type="text" placeholder="Enter your name" name="name" required>
+        <br><br>
+        <fieldset>
+            <legend>Gender*</legend>
+            <label for="x">
+                <input type="radio" value="male" name="gender" id="x" required> Male
+            </label>
+            <label for="y">
+                <input type="radio" value="female" name="gender" id="y" required> Female
+            </label>
+            <label for="z">
+                <input type="radio" value="other" name="gender" id="z" required> Other
+            </label>
+        </fieldset>
+        <br><br>
+        Address: <textarea name="address" cols="60" rows="10"></textarea>
+        <br><br>
+        Pincode:* <input type="number" placeholder="123456" name="pincode" required>
+        <br><br>
+        Mobile No.:*<input type="number" placeholder="1234567890" name="mobile_no" required>
+        <br><br>
+        E Mail:*<input type="email" placeholder="sample@gmail.com" name="email" required>
+        <br><br>
+        <h2>Payment Information</h2> 
+        <br>
+        Card Type:*
+        <select name="card_type" required>
+            <option>--Select Card Type--</option>
+            <option value="visa">Visa</option>
+            <option value="Rupay">Rupay</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="union">Union</option>
+        </select>
+        <br><br>
+        Card no.:*<input type="number" placeholder="1111-2222-3333-4444" name="card_no" required>
+        <br><br>
+        Expiration Date:*<input type="date" required name="expiration_date">
+        <br><br>
+        CVV:*<input type="number" placeholder="123" name="cvv" required>
+        <br><br>
+        <input type="submit" value="Pay Now">        
+    </form>
+    </div>
+</body>
+</html>
